@@ -1,7 +1,8 @@
 import React from 'react'
+import Button from '@material-ui/core/Button'
 
 const App: React.FC = () => {
-  return <div></div>
+  return <Button variant='contained'>Test</Button>
 }
 
 export default App
