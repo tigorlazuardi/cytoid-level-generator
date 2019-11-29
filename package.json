@@ -15,6 +15,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
+    "typeface-roboto": "^0.0.75",
     "typescript": "3.7.2"
   },
   "main": "./electron-starter.js",
@@ -43,8 +44,13 @@
     ]
   },
   "devDependencies": {
+    "@types/react-redux": "^7.1.5",
+    "@types/react-router-dom": "^5.1.2",
+    "babel-plugin-transform-imports": "^2.0.0",
     "cross-env": "^6.0.3",
+    "customize-cra": "^0.9.1",
     "electron": "^7.1.2",
-    "foreman": "^3.0.1"
+    "foreman": "^3.0.1",
+    "react-app-rewired": "^2.1.5"
   }
 }

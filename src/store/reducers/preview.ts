@@ -1,5 +1,5 @@
 import { PREVIEW_SET } from '../types'
-import { AnyAction } from 'redux'
+import { IPreviewAction } from '../actions/preview'
 
 export interface PreviewState {
   image: WindowBase64 | null
@@ -7,20 +7,12 @@ export interface PreviewState {
   [key: string]: any
 }
 
-export interface PreviewAction extends AnyAction {
-  type: string
-  payload: {
-    mod: 'string'
-    value: any
-  }
-}
-
 const initialState: PreviewState = {
   image: null,
   preview_music: null,
 }
 
-export default (state = initialState, action: PreviewAction) => {
+export default (state = initialState, action: IPreviewAction) => {
   const { type, payload } = action
   switch (type) {
     case PREVIEW_SET:

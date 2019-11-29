@@ -1,5 +1,5 @@
 import { METADATA_SET } from '../types'
-import { AnyAction } from 'redux'
+import { IMetadataAction } from '../actions/metadata'
 
 interface ChartState {
   type: string
@@ -7,14 +7,6 @@ interface ChartState {
   path: string
   storyboard?: { path: string }
   music_override?: { path: string }
-}
-
-export interface MetadataAction extends AnyAction {
-  type: string
-  payload: {
-    mod: 'string'
-    value: any
-  }
 }
 
 export interface MetadataState {
@@ -54,7 +46,7 @@ const initialState: MetadataState = {
   charts: [],
 }
 
-export default (state = initialState, action: MetadataAction): any => {
+export default (state = initialState, action: IMetadataAction): any => {
   const { type, payload } = action
   switch (type) {
     case METADATA_SET:
